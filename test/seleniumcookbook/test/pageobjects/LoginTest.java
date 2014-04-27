@@ -15,7 +15,7 @@ public class LoginTest {
   private WebDriver driver;
   private String url="http://linea102.chaco.gov.ar/";
   private String user;
-  private String pass
+  private String pass;
   LoginFields loginfields;
   @BeforeClass
   public void beforeClass() {
