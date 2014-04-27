@@ -12,8 +12,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 
 public class LoginTest {
-  WebDriver driver;
-  String url="http://linea102.chaco.gov.ar/";
+  private WebDriver driver;
+  private String url="http://linea102.chaco.gov.ar/";
+  private String user;
+  private String pass
   LoginFields loginfields;
   @BeforeClass
   public void beforeClass() {
@@ -26,8 +28,8 @@ public class LoginTest {
   public void setUp() {
 	  loginfields=new LoginFields(driver);
 	  
-	  loginfields.usuario.sendKeys("hernan_romero");
-	  loginfields.password.sendKeys("zeroone");
+	  loginfields.usuario.sendKeys("user");
+	  loginfields.password.sendKeys("pass");
 	  loginfields.ingresar.click();
 	  Assert.assertEquals("Listado de Legajos", loginfields.tituloLogin.getText());
 	  System.out.print(loginfields.tituloLogin);
